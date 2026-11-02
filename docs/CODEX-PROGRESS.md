@@ -46,3 +46,13 @@ Nhánh triển khai: `codex/tuto-roadmap-and-startup`.
 - Kiểm thử cục bộ: build thành công; 9 kiểm thử tài chính đạt; thử khởi động preview thật, gọi lại để tái sử dụng, từ chối cổng đang phục vụ ứng dụng khác, từ chối cổng không hợp lệ. Máy chủ thử nghiệm do kiểm thử tạo được dừng sau kiểm tra.
 - Chưa có bằng chứng thay đổi này chạy trong Codespace của người dùng. Lỗi HTTP 401 vẫn là điểm chặn xác thực riêng. Không đánh dấu mốc 1 hoàn thành.
 - Không sửa main, không merge, không triển khai Sites hoặc Vercel trong bước này.
+
+## Xác minh trực tiếp Codespace — 02/11/2026
+
+Cập nhật này thay thế trạng thái “chưa xác minh mở app” ở các lần thử trước, nhưng giữ lịch sử để đối chiếu:
+
+- TinyFish báo đã lấy main và chọn tác vụ `Tuto: khởi động bản xem` trong Codespace.
+- Run `886f3052-2dce-4512-a597-f1efb591e74c` mở trực tiếp cổng 4180, thấy giao diện Tuto cùng số dư mẫu 12.750.000 ₫ và điều hướng qua các màn hình chính.
+- Không gặp HTTP 401 trong lần xác minh này. Không khẳng định mọi phiên sau đều không cần đăng nhập.
+- Đã chạy lại 9 kiểm thử logic, build và kiểm thử startup trong môi trường cục bộ; chưa có log tương ứng trong Codespace.
+- Chi tiết giới hạn SonarQube, Plugin Eval và bằng chứng: `docs/TOOL-VERIFICATION.md`.
