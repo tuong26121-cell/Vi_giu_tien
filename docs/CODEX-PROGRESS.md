@@ -34,3 +34,15 @@ Không lưu cookie, token hoặc bí mật trong tài liệu này.
 2. Giữ trạng thái bước Codespace là BỊ CHẶN / CHƯA XÁC MINH, không đánh dấu hoàn thành.
 3. Flutter APK: chưa build và chưa kiểm thử trong Codespace.
 4. Ngân hàng thật: chưa triển khai; bản hiện tại dùng dữ liệu và tiền mô phỏng.
+
+
+## Bổ sung lộ trình và tự khởi động — 02/11/2026
+
+Nhánh triển khai: `codex/tuto-roadmap-and-startup`.
+
+- Đã viết `docs/ROADMAP.md`: 5 mốc, phụ thuộc và tiêu chí nghiệm thu.
+- Cấu hình hiện tại trên main chỉ có postCreate build và forwardPorts, chưa có lệnh tự chạy server. Đây là thiếu sót về tiện ích khởi động, không chứng minh nó gây HTTP 401.
+- Bổ sung postStartCommand, script khởi động idempotent và tác vụ VS Code.
+- Kiểm thử cục bộ: build thành công; 9 kiểm thử tài chính đạt; thử khởi động preview thật, gọi lại để tái sử dụng, từ chối cổng đang phục vụ ứng dụng khác, từ chối cổng không hợp lệ. Máy chủ thử nghiệm do kiểm thử tạo được dừng sau kiểm tra.
+- Chưa có bằng chứng thay đổi này chạy trong Codespace của người dùng. Lỗi HTTP 401 vẫn là điểm chặn xác thực riêng. Không đánh dấu mốc 1 hoàn thành.
+- Không sửa main, không merge, không triển khai Sites hoặc Vercel trong bước này.

@@ -26,3 +26,8 @@ Người dùng bận, giao quyền xử lý các việc cần thiết trong dự
 - Trang Tuto thực sự hiển thị; không dùng tên cổng, README, đường dẫn dự kiến hoặc chỉ mã HTTP làm bằng chứng đủ.
 - Giữ cổng riêng tư; không thay quyền để vượt giới hạn truy cập.
 - Kiểm tra điều hướng Túi tiền, Thu chi, Mục tiêu, Thống kê, Chuyển tiền.
+
+
+## Lộ trình được vạch theo yêu cầu tiếp tục dự án
+
+Xem `docs/ROADMAP.md`. Ưu tiên mốc 1, tiếp đến chất lượng MVP web, APK Android, backend/ngân hàng sandbox rồi đánh giá phát hành thật. Thông tin thiếu hoặc quyền nền tảng bị chặn được ghi lại; không hỏi thêm trong thời gian người dùng đã yêu cầu tự điều phối.
