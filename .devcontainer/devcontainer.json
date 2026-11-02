@@ -1,0 +1,12 @@
+{
+  "name": "Tuto — Không gian mã",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardPorts": [4180],
+  "portsAttributes": {
+    "4180": { "label": "Tuto — xem ứng dụng", "onAutoForward": "openPreview", "visibility": "private" }
+  },
+  "postCreateCommand": "npm test && npm run build",
+  "customizations": {
+    "vscode": { "settings": { "editor.tabSize": 2, "files.trimTrailingWhitespace": true } }
+  }
+}
