@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Tuto: khởi động bản xem",
+      "type": "process",
+      "command": "node",
+      "args": [".devcontainer/start-preview.mjs"],
+      "options": { "cwd": "${workspaceFolder}" },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated" }
+    },
+    {
+      "label": "Tuto: kiểm thử",
+      "type": "process",
+      "command": "npm",
+      "args": ["test"],
+      "problemMatcher": []
+    }
+  ]
+}

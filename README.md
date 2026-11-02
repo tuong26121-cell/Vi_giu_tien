@@ -64,3 +64,28 @@ Thư mục `flutter/` giữ nguyên mã nguồn của ZIP được cung cấp, k
 Bản web đã build thành công và đạt 9 kiểm thử logic. Bản triển khai cũng đã được kiểm tra bằng trình duyệt cho các luồng chuyển nội bộ, thu chi, mục tiêu, lưu dữ liệu, CSV và bố cục màn hình từ 320 đến 1440 px.
 
 Cấu hình Codespaces được cung cấp để tái tạo môi trường; trạng thái khởi động thực tế phụ thuộc quyền và hạn mức GitHub của tài khoản.
+
+
+## Lộ trình và tiến độ
+
+- [Lộ trình 5 mốc của Tuto](docs/ROADMAP.md)
+- [Tiến độ và bằng chứng kiểm tra](docs/CODEX-PROGRESS.md)
+- [Phạm vi điều phối](docs/CODEX-WORKFLOW.md)
+
+## Cải thiện khởi động Codespaces
+
+Nhánh `codex/tuto-roadmap-and-startup` bổ sung `postStartCommand`: khi Codespace khởi động với cấu hình mới, Tuto tự build và chạy preview nền ở cổng 4180. Nếu đã có đúng Tuto đang chạy, script giữ nguyên máy chủ; nếu cổng đang phục vụ ứng dụng khác, script báo lỗi và không dừng dịch vụ đó. Log nằm ở thư mục tạm và không được đưa vào Git.
+
+Có thể chạy tác vụ **Tasks: Run Task → Tuto: khởi động bản xem** trong VS Code, hoặc:
+
+```sh
+npm run start:codespace
+```
+
+Kiểm thử riêng khả năng khởi động/lặp lại và bảo vệ dịch vụ đang chiếm cổng:
+
+```sh
+npm run test:startup
+```
+
+Cấu hình mới chưa được áp dụng vào Codespace hiện có chỉ bằng việc lưu PR. Cần sử dụng phiên bản mã đã tích hợp và chạy lại lifecycle/tác vụ tương ứng. Script không thay đổi quyền GitHub và không giải quyết lỗi xác thực HTTP 401 của cổng riêng tư.
